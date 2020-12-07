@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FindMyCar</title>
+</head>
+<body>
+	<link rel ="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+	<h1> FindMyCar </h1>
+{% if not session.logged_in %}
+    <a href="/facebook_login">Login with facebook</a>
+{% else %}
+<a href = "/main"></a>
+{% endif %}
+<span>
+    {% for message in get_flashed_messages() %}
+        {{ message}}
+    {% endfor %}
+</span>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Altitude</th>
+        <th>Date&Time</th>
+    </tr>
+    {% for doc in results %}
+    <tr>
+        <td>{{doc['_id']}}</td>
+        <td>{{doc['lat']}}</td>
+        <td>{{doc['lng']}}</td>
+        <td>{{doc['alt']}}</td>
+        <td>{{doc['datetime']}}</td>
+    </tr>
+    {% endfor %}
+</table>
